@@ -61,7 +61,7 @@ def _parse_time(s: str) -> bool:
     return bool(re.fullmatch(r"(?:0?[1-9]|1[0-2]):[0-5]\d\s*(?:AM|PM)", s.strip(), re.I))
 
 def movies(city: str = "chennai"):
-    url = f"{BASE}/explore/movies-{city}?cat=MT"
+    url = f"{BASE}/explore/home/{city}"
     soup = BeautifulSoup(_get(url, ttl=30), "html.parser")
     out, seen = [], set()
 
