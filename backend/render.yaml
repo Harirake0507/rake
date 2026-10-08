@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: bms-live-alert-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    healthCheckPath: /health
